@@ -17,7 +17,6 @@ public class ReusableMethods {
             }
         }
     }
-
     public static String getTextWithTimeout(WebElement element, int timeout) {
         String text="";
         for (int i = 0; i < timeout; i++) {
@@ -189,6 +188,16 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+    // VERIFY IS EXPECTED AND ACTUAL TEXTS ARE MATCHING
+    public static void verifyExpectedAndActualTextMatch(String expectedText,WebElement actualElement){
+        try{
+            //    Just in case there is a synchronization issue, handle it first then get the text
+            WaitUtils.waitForVisibility(actualElement,10);
+            assertEquals(expectedText,actualElement.getText());
+        }catch (NoSuchElementException e){
+            e.printStackTrace();
+        }
+    }
     //    ALERT
     public void acceptAlert() throws InterruptedException {
         Driver.getDriver().switchTo().alert().accept();
@@ -264,3 +273,11 @@ public class ReusableMethods {
         new Actions(Driver.getDriver()).dragAndDropBy(source,x,y).perform();
     }
 }
+
+
+
+
+
+
+
+
