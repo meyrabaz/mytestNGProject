@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="my login suite" verbose="1" >
+    <!--    TEST 1-->
+    <test name="test suite 1" >
+        <classes>
+            <class name="com.myapp.tests.smoketestsuite.logintests.excelautomation.Day21_ExcelLogin" />
+        </classes>
+    </test>
+    <!--    TEST 2-->
+    <test name="test suite 2">
+        <classes>
+            <class name="com.myapp.tests.smoketestsuite.logintests.Day20_PositiveLogin"/>
+            <class name="com.myapp.tests.smoketestsuite.logintests.Day20_US413123_Bad_Credentials"/>
+        </classes>
+    </test>
+</suite>
