@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/techproed/IdeaProjects/mytestNGproject/src/test/java/com/myapp/tests/dataprovider">
+        <classes>
+            <class name="com.myapp.tests.dataprovider.Day21_DataProvider1">
+                <methods>
+                    <include name="customerCredentialsTest"/>
+                </methods>
+            </class>
+            <class name="com.myapp.tests.dataprovider.Day22_DataProvider2">
+                <methods>
+                    <include name="productTest"/>
+                    <include name="adminLoginTest"/>
+                </methods>
+            </class>
+            <class name="com.myapp.tests.dataprovider.Day22_DataProvider3">
+                <methods>
+                    <include name="customerLoginTest"/>
+                </methods>
+            </class>
+            <class name="com.myapp.tests.dataprovider.Day22_DataProvider4">
+                <methods>
+                    <include name="customerLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+        <!--NOTE : THIS XML FILE IS CREATED USING TESTNG XML PLUGIN-->
