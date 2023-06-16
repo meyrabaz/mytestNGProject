@@ -3,10 +3,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 public class Day18_Assertions {
-    @Test
+    @Test(groups = "regression1")
     public void hardAssertion(){
         /*
-        Hard assertion will stop if the assertion fails
+        Hard assertion will stop if the assertion fails. This is used A LOT
          */
         System.out.println("Starting the test case");
         Assert.assertTrue(true);//PASS SO CONTINUE
@@ -32,7 +32,7 @@ public class Day18_Assertions {
         softAssert.assertAll("TEST CASE COMPLETED");//assertAll MUST BE USED AT THE END TO MARK THE TEST CASE AS FAIL. THIS MUST BE AT THE VERY END.
         System.out.println("Line 38 codes");
     }
-    @Test
+    @Test(groups = "regression1")
     public void javaAssertion(){
         /*
        java assert is like Hard Assertion. This is not used a lot. We should use TestNG assertion in a testNG framework

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Day19_POM_Login {
     //    Create a test case to login the https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 //    using page object model
-    @Test
+    @Test(groups = "regression1")
     public void loginTest(){
 /*
 1. LOCATE PAGE OBJECTS IN PAGE CLASS
@@ -29,8 +29,7 @@ public class Day19_POM_Login {
 //      Then verify log out is successful
 //        We have different options. I choose if URL have auth keyword, it means we are on the login page
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("auth"));
-
-        // Close the  driver
+//        Close the driver
         Driver.closeDriver();
     }
 }
